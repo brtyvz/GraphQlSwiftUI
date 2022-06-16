@@ -14,11 +14,13 @@ public struct CountriesResponseDTO : Identifiable{
     public let capital : String
     public let emoji : String
     public let phone : String
+    public let currency : String
     
-    init (name: String, capital:String, emoji:String,phone: String ) {
+    init (name: String, capital:String, emoji:String,phone: String, currency: String ) {
         self.name = name
         self.capital = capital
         self.emoji = emoji
         self.phone = phone
+        self.currency = currency
     }
 }

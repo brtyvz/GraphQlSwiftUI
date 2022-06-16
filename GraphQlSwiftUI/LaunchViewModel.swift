@@ -20,7 +20,7 @@ class LaunchViewModel : ObservableObject {
             case.success(let graphQLResult):
                 guard let countries = graphQLResult.data?.countries else{return}
                 for country in countries { 
-                    let countryModel =  CountriesResponseDTO(name: country.name, capital: country.capital ?? "", emoji: country.emoji, phone:country.phone)
+                    let countryModel =  CountriesResponseDTO(name: country.name, capital: country.capital ?? "", emoji: country.emoji, phone:country.phone,currency: country.currency ?? "")
                     self.countryList.append(countryModel)
                     
                 }

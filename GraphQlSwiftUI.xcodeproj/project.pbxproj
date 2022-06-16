@@ -23,6 +23,7 @@
 		5B86125E285918E10099F3BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B86125D285918E10099F3BC /* Assets.xcassets */; };
 		5B861261285918E10099F3BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B861260285918E10099F3BC /* Preview Assets.xcassets */; };
 		5B861269285925EF0099F3BC /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 5B861268285925EF0099F3BC /* Apollo */; };
+		5BB0541C285BC4E300A0931A /* CountryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB0541B285BC4E300A0931A /* CountryDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		5B86125B285918DE0099F3BC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5B86125D285918E10099F3BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B861260285918E10099F3BC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5BB0541B285BC4E300A0931A /* CountryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			children = (
 				5B645DDB285A287200BAA6B0 /* CountriesView.swift */,
 				5B645DDD285A28A600BAA6B0 /* CountryCellView.swift */,
+				5BB0541B285BC4E300A0931A /* CountryDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BB0541C285BC4E300A0931A /* CountryDetailView.swift in Sources */,
 				5B645DD3285A007900BAA6B0 /* CountriesResponseDTO.swift in Sources */,
 				5B645DD02859C8C000BAA6B0 /* LaunchModel.swift in Sources */,
 				5B86125C285918DE0099F3BC /* ContentView.swift in Sources */,

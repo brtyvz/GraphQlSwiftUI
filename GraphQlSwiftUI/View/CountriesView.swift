@@ -18,6 +18,7 @@ struct CountryCellView: View {
                 ForEach(viewModel.countryList.filter({$0.name.contains(searchText.lowercased())||searchText.isEmpty })){ country in
                     
                     NavigationLink {
+                        CountryDetailView(country: country, viewModel: viewModel)
                         
                     } label: {
                         CountriesView(country: country, viewModel: viewModel)
@@ -28,7 +29,7 @@ struct CountryCellView: View {
             }
             }
             .searchable(text: $searchText)
-                    .navigationTitle("Pokedex")
+                    .navigationTitle("Countries")
         }
     }
 }
