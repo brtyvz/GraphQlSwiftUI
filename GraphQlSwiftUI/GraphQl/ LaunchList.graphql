@@ -1,0 +1,12 @@
+query fetchCountries {
+  
+  countries{
+    code
+    name
+   emoji
+    capital
+    phone
+    
+  }
+  
+}

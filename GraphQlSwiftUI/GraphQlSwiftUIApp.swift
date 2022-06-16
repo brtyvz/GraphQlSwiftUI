@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct GraphQlSwiftUIApp: App {
+    @StateObject var launchViewModel = LaunchViewModel()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CountryCellView()
+                .environmentObject(launchViewModel)
         }
     }
 }
