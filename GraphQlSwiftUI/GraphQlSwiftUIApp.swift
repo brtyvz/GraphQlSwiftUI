@@ -12,7 +12,8 @@ struct GraphQlSwiftUIApp: App {
     @StateObject var launchViewModel = LaunchViewModel()
     var body: some Scene {
         WindowGroup {
-            CountryCellView()
+            
+            TabBarView(viewModel: launchViewModel)
                 .environmentObject(launchViewModel)
         }
     }

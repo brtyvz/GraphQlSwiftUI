@@ -7,18 +7,17 @@
 
 import SwiftUI
 import Kingfisher
-struct CountriesView: View {
+struct CountryCellView: View {
   
     let country : CountriesResponseDTO
-    let viewModel : LaunchViewModel
+
     
-    init(country:CountriesResponseDTO,viewModel:LaunchViewModel) {
+    init(country:CountriesResponseDTO) {
         self.country = country
-        self.viewModel = viewModel
+        
     }
     var body: some View {
         ZStack{
-            
             VStack(alignment:.leading){
                 Text(country.name.capitalized)
                     .font(.title).bold()
@@ -43,13 +42,16 @@ struct CountriesView: View {
                             RoundedRectangle(cornerRadius: 20)
                                 .fill(Color.white.opacity(0.25))
                         )
-                        .frame(width:280, height:30)
+                        .frame(width:250, height:30)
                     Text(country.emoji) .font(.system(size: 50))
-                        .padding(.trailing,5)
-                    
                 }
+                
             }
-        }.background(.blue)
+        }
+        .padding(.trailing,-10)
+        .padding(.leading,-10)
+        
+        .background(.blue)
         
             .cornerRadius(12)
             .shadow(color: .blue, radius: 6, x: 0, y: 0)

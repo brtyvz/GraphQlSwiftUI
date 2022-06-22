@@ -7,6 +7,7 @@
 
 import Foundation
 import Apollo
+
 import SwiftUI
 class LaunchViewModel : ObservableObject {
     //model

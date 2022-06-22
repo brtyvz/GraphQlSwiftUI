@@ -7,21 +7,22 @@
 
 import SwiftUI
 
-struct CountryCellView: View {
-       @State var searchText = ""
+struct CountriesView: View {
+       @State private var searchText = ""
     private let gridItem = [GridItem(.flexible())]
-    @ObservedObject var viewModel = LaunchViewModel()
+//    @ObservedObject var viewModel = LaunchViewModel()
+    var countryList : [CountriesResponseDTO] = []
     var body: some View {
         NavigationView {
             ScrollView{
      LazyVGrid(columns:gridItem ,spacing: 22 ){
-                ForEach(viewModel.countryList.filter({$0.name.contains(searchText.lowercased())||searchText.isEmpty })){ country in
+                ForEach(countryList.filter({$0.name.contains(searchText)||searchText.isEmpty })){ country in
                     
                     NavigationLink {
-                        CountryDetailView(country: country, viewModel: viewModel)
+                        CountryDetailView(country: country)
                         
                     } label: {
-                        CountriesView(country: country, viewModel: viewModel)
+                        CountryCellView(country: country)
                     }
                     
                 }
@@ -32,9 +33,10 @@ struct CountryCellView: View {
                     .navigationTitle("Countries")
         }
     }
+
 }
-struct CountryCellView_Previews: PreviewProvider {
-    static var previews: some View {
-        CountryCellView()
-    }
-}
+//struct CountryCellView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CountryCellView()
+//    }
+//}

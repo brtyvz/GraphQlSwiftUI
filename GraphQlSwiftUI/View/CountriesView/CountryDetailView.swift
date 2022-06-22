@@ -9,11 +9,11 @@ import SwiftUI
 
 struct CountryDetailView: View {
     let country : CountriesResponseDTO
-    let viewModel : LaunchViewModel
+  
     
-    init(country:CountriesResponseDTO,viewModel:LaunchViewModel) {
+    init(country:CountriesResponseDTO) {
         self.country = country
-        self.viewModel = viewModel
+   
     }
     var body: some View {
         VStack(alignment: .center) {
